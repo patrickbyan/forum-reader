@@ -1,0 +1,44 @@
+<h2>Discussion</h2>
+
+<div class="header">
+    <div class="topic-title">
+        <span class="arrow-up"></span>
+        <span>{{discussion.title}}</span>
+    </div>
+    <div class="topic-content">
+        <div>
+            {{discussion.score}} points
+        </div>
+        <div>
+            by {{discussion.by}}
+        </div>
+        <div>
+            {{discussion.duration}}
+        </div>
+        <div class="content-comments">
+            hide
+        </div>
+        <div class="content-comments">
+            pass
+        </div>
+        <div class="content-comments">
+            favorite
+        </div>
+        <div class="content-comments">
+            {{discussion.kids?.length}} comments
+        </div>
+    </div>
+</div>
+
+<div class="body">
+    {{discussion.text}}
+</div>
+
+<div class="comments">
+    <div class="comments-title"><span class="arrow-up"></span> {{discussion.comments?.by}} {{discussion.comments?.duration}}</div>
+    <div class="comments-content">
+        {{discussion.comments?.text}}
+    </div>
+</div>
+
+<button class="btn" type="button" (click)="goToTopics()">Back</button>

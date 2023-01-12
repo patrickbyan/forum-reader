@@ -1,0 +1,26 @@
+<h2>Topics</h2>
+
+<ol class="topic">
+    <li *ngFor="let topic of topics">
+        <a [routerLink]="['/discussion', topic.id]" class="link">
+            <div class="topic-title">
+                <span class="arrow-up"></span>
+                <span>{{topic.title}}</span>
+            </div>
+            <div class="topic-content">
+                <div>
+                    {{topic.score}} points
+                </div>
+                <div>
+                    by {{topic.by}}
+                </div>
+                <div>
+                    {{topic.duration}}
+                </div>
+                <div class="content-comments">
+                    {{topic.kids?.length}} comments
+                </div>
+            </div>
+        </a>
+    </li>
+</ol>

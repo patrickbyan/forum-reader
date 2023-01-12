@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --size: .5em
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-bottom: var(--size) solid hsl(0, 0%, 16%);
+}
+
+.arrow-up:hover {
+    border-bottom: var(--size) solid hsl(0, 0%, 57%);
+}
+
+body {
+    background-color: blanchedalmond;
+}

@@ -1,0 +1,67 @@
+.topic li {
+    margin-block: .4em;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.link:hover {
+    cursor: pointer;
+}
+
+.link:hover .topic-title {
+    color: hsl(0, 0%, 53%);
+}
+
+.topic-title {
+    font-weight: 600;
+    color: hsl(0, 0%, 14%);
+    display: flex;
+    align-items: center;
+}
+
+.topic-title .arrow-up {
+    margin-right: .2em;
+}
+
+.topic-content {
+    font-weight: 400;
+    color: hsl(0, 0%, 38%);
+    font-size: .85em;
+    display: flex;
+}
+
+.topic-content > div {
+    margin-right: .3em;
+}
+
+.topic-content .content-comments {
+    margin-left: .3em;
+    padding-left: .5em;
+    border-left: .125em solid hsl(0, 0%, 38%);
+}
+
+.body {
+    margin-block: 1rem;
+    font-weight: 400;
+    color: hsl(0, 0%, 14%);
+}
+
+.comments-title {
+    font-weight: 400;
+    color: hsl(0, 0%, 38%);
+    font-size: .85em;
+    display: flex;
+    align-items: center;
+}
+
+.comments-title .arrow-up {
+    margin-right: .3em;
+}
+
+.comments-content {
+    margin-block: 1rem;
+    font-weight: 400;
+    color: hsl(0, 0%, 14%);
+}
