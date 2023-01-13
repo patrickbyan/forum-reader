@@ -1,6 +1,6 @@
 <h2>Topics</h2>
 
-<ol class="topic">
+<ol class="topic" start="{{startNumber}}">
     <li *ngFor="let topic of topics">
         <a [routerLink]="['/discussion', topic.id]" class="link">
             <div class="topic-title">
@@ -24,3 +24,14 @@
         </a>
     </li>
 </ol>
+
+<div class="paging">
+    <div (click)="movePage('<<')"><<</div>
+    <div (click)="movePage('<')"><</div>
+    <div (click)="movePage('1')">1</div>
+    <div (click)="movePage('2')">2</div>
+    <div (click)="movePage('3')">3</div>
+    <div (click)="movePage('4')">4</div>
+    <div (click)="movePage('>')">></div>
+    <div (click)="movePage('>>')">>></div>
+</div>

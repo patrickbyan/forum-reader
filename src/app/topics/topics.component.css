@@ -41,3 +41,19 @@
     padding-left: .5em;
     border-left: .125em solid hsl(0, 0%, 38%);
 }
+
+.paging {
+    display: flex;
+}
+
+.paging > div {
+    border: 1px solid hsl(0, 0%, 14%);
+    padding: .4em;
+}
+
+.paging > div:hover {
+    background-color: hsl(0, 0%, 38%);;
+    color: hsl(0, 0%, 87%);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}

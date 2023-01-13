@@ -29,14 +29,17 @@ export class TopicService {
         return timestamp.fromNow()
     }
     
-    async getTopics() {
+    async getTopics(page = 1, size = 5) {
+        const offset = (page - 1) * size
+
+
         const fetchTopicIds = await this.get('/askstories.json')
         
         if(fetchTopicIds.err) {
            return [] 
         }
 
-        const topicIds = fetchTopicIds.data.filter((id: number, index: number) => index < 20)
+        const topicIds = fetchTopicIds.data.splice(offset, size)
         
         let error = false
         const topics = await Promise.all(
@@ -88,7 +91,6 @@ export class TopicService {
 
         const { time } = fetchTopic.data
 
-        console.log(this.getTimeDiff(time))
         fetchTopic.data.duration = this.getTimeDiff(time)
 
 
